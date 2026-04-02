@@ -46,7 +46,7 @@ const Hero = () => {
             <span className="animate-pulse shadow-blue-500">_</span>
           </h1>
           <p className="max-w-xl text-base md:text-lg lg:text-xl text-accent font-light leading-relaxed mb-8 md:mb-10">
-            A passionate developer crafting <span className="text-white hover:text-violet-glow transition-colors cursor-default underline decoration-violet-glow/30 underline-offset-8">modern, high-performance web experiences</span> with a focus on sleek design and seamless interaction.
+            A passionate developer crafting modern, high-performance web experiences with a focus on sleek design and seamless interaction.
           </p>
 
           <motion.div
