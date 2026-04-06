@@ -80,7 +80,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="flex min-h-[50vh] md:min-h-[150vh] shrink-0 scale-[0.5] sm:scale-[0.7] md:scale-100 transform origin-top flex-col items-center justify-start py-0 [perspective:800px] md:pt-0 md:pb-80"
+      className="macbook-scroll-container flex min-h-[50vh] md:min-h-[150vh] shrink-0 scale-[0.5] sm:scale-[0.7] md:scale-100 transform origin-top flex-col items-center justify-start py-0 [perspective:800px] md:pt-0 md:pb-80"
     >
       {title && (
         <motion.h2
@@ -145,7 +145,7 @@ export const Lid = ({
   src?: string;
 }) => {
   return (
-    <div className="relative [perspective:800px]">
+    <div className="relative [perspective:800px] gpu-layer">
       <div
         style={{
           transform: "perspective(800px) rotateX(-25deg) translateZ(0px)",
@@ -174,7 +174,7 @@ export const Lid = ({
           transformStyle: "preserve-3d",
           transformOrigin: "top",
         }}
-        className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2"
+        className="absolute inset-0 h-96 w-[32rem] rounded-2xl bg-[#010101] p-2 gpu-layer"
       >
         <div className="absolute inset-0 rounded-lg bg-[#272729]" />
         <img
@@ -571,7 +571,7 @@ export const KBtn = ({
     <div
       className={cn(
         "[transform:translateZ(0)] rounded-[4px] p-[0.5px] [will-change:transform]",
-        backlit && "bg-white/[0.2] shadow-xl shadow-white",
+        backlit && "bg-white/[0.2] shadow-sm shadow-white/20 md:shadow-xl md:shadow-white",
       )}
     >
       <div
@@ -601,7 +601,7 @@ export const KBtn = ({
 export const SpeakerGrid = () => {
   return (
     <div
-      className="mt-2 flex h-40 gap-[2px] px-[0.5px]"
+      className="mt-2 flex h-40 gap-[2px] px-[0.5px] gpu-layer"
       style={{
         backgroundImage:
           "radial-gradient(circle, #08080A 0.5px, transparent 0.5px)",

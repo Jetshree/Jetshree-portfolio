@@ -42,7 +42,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-end md:justify-center items-center relative h-12">
 
         {/* Desktop Nav */}
-        <div className={`hidden md:flex gap-8 px-8 py-3 rounded-full transition-all duration-500 ${scrolled ? 'glass bg-background/50' : ''}`}>
+        <div className={`hidden md:flex gap-8 px-8 py-3 rounded-full transition-all duration-500 gpu-layer ${scrolled ? 'glass bg-background/50' : ''}`}>
            {navLinks.map((link) => (
              <a 
                key={link.name} 
@@ -71,7 +71,7 @@ const Navbar = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-[#030303] relative z-[999] mt-4 mx-6 rounded-3xl overflow-hidden border border-white/10 shadow-2xl"
+            className="md:hidden bg-[#030303] relative z-[999] mt-4 mx-6 rounded-3xl overflow-hidden border border-white/10 shadow-2xl gpu-layer"
           >
             <div className="flex flex-col items-center py-12 gap-10">
               {navLinks.map((link) => (

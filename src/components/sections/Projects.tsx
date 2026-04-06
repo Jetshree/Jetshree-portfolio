@@ -59,7 +59,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.2, duration: 0.6 }}
-            className={`group relative glass rounded-[2.5rem] p-10 overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-500 bg-gradient-to-br ${project.gradient}`}
+            className={`group relative glass rounded-[2.5rem] p-10 overflow-hidden border border-white/5 hover:border-white/10 transition-all duration-500 bg-gradient-to-br ${project.gradient} gpu-layer`}
           >
             <div className="relative z-10">
               <h3 className="text-3xl font-black text-white mb-4 tracking-tight group-hover:text-electric-blue transition-colors">

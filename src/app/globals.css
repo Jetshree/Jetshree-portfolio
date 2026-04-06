@@ -31,6 +31,39 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  /* Safari: isolate compositing layer to prevent full-page repaint */
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  isolation: isolate;
+}
+
+/* Safari-specific: reduce blur intensity which causes GPU thrash */
+@supports (-webkit-hyphens: none) {
+  .glass {
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  /* Promote scroll-animated containers to their own GPU layer */
+  .macbook-scroll-container {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: transform;
+    contain: layout style;
+  }
+
+  /* Reduce expensive glow blurs on Safari */
+  .safari-blur-reduce {
+    filter: none !important;
+    opacity: 0.15;
+  }
+
+  /* Promote hero section to own composite layer */
+  #home {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    will-change: scroll-position;
+  }
 }
 
 @layer utilities {
@@ -39,5 +72,13 @@ body {
   }
   .text-glow-violet {
     text-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  }
+
+  /* GPU-promoted layer for framer-motion animated elements */
+  .gpu-layer {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
   }
 }

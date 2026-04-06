@@ -13,8 +13,8 @@ export default function Home() {
       <div className="relative">
         
         {/* Background Gradients for Depth */}
-        <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-violet-glow/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute top-1/2 left-0 w-[40vw] h-[40vw] bg-electric-blue/5 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-violet-glow/5 rounded-full blur-[120px] pointer-events-none safari-blur-reduce" />
+        <div className="absolute top-1/2 left-0 w-[40vw] h-[40vw] bg-electric-blue/5 rounded-full blur-[100px] pointer-events-none safari-blur-reduce" />
         
         <Projects />
         <Contact />

@@ -20,9 +20,9 @@ const Hero = () => {
   }, [index]);
 
   return (
-    <section id="home" className="min-h-screen flex items-start px-6 md:px-12 relative overflow-hidden backdrop-blur-sm pt-24 lg:pt-32">
+    <section id="home" className="min-h-screen flex items-start px-6 md:px-12 relative overflow-hidden backdrop-blur-sm pt-24 lg:pt-32 gpu-layer">
       {/* Deep Teal Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[40vw] bg-cyan-800/30 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[40vw] bg-cyan-800/30 rounded-full blur-[120px] pointer-events-none safari-blur-reduce" />
 
       {/* Sophisticated Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff1a_2px,transparent_1px),linear-gradient(to_bottom,#ffffff1a_2px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_80%_100%_at_10%_0%,#000_10%,transparent_100%)] pointer-events-none" />
